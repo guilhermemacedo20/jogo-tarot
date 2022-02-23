@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Images } from 'src/app/models/placeholder.model';
 import { CrudService } from 'src/app/services/crud.service';
 
 @Component({
@@ -15,6 +14,7 @@ export class CrudComponent implements OnInit {
   }
 
   ngOnInit(): void { }
+  
   getter(){
     this.crudService.getImagem().subscribe(
     (data: any) => {

@@ -1,4 +1,9 @@
-<div *ngFor="let i of images.cards" style = "display: inline-block">
-    <p>{{i.name}}</p>
-    <img [attr.src]="images.imagesUrl + i.image">
+<div class="mx-auto" style="width: 200px;">
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" style="margin: 10px;" type="button">Jogar!</button>
+    </div>
+</div>
+<div class="img-thumbnail img-fluid" *ngFor="let i of images.cards" style = "display: inline-block;margin-left: 7px;">
+    <p class="text-center" style="font-size: 12px;">{{i.name}}</p>
+    <img style="width: 120px;height: 220px;" [attr.src]="images.imagesUrl + i.image">
 </div>
