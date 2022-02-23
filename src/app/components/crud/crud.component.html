@@ -1,0 +1,4 @@
+<div *ngFor="let i of images.cards" style = "display: inline-block">
+    <p>{{i.name}}</p>
+    <img [attr.src]="images.imagesUrl + i.image">
+</div>
