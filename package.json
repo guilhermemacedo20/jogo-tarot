@@ -18,6 +18,7 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "gulp": "^4.0.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -28,6 +29,8 @@
     "@angular/compiler-cli": "~13.2.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^5.0.0",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -35,5 +38,17 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.5.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhermeAPMacedo/jogo-tarot.git"
+  },
+  "author": "Guilherme Aires",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuilhermeAPMacedo/jogo-tarot/issues"
+  },
+  "homepage": "https://github.com/GuilhermeAPMacedo/jogo-tarot#readme"
 }
