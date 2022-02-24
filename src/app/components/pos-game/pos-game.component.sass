@@ -1,0 +1,30 @@
+.selected .turnCard
+    transform: rotateY(180deg)
+.card
+    margin: 5px
+    width: 120px
+    height: 220px    
+    perspective: 1000px
+    cursor: pointer
+    padding: 0
+.turnCard
+    width: 100%
+    height: 100%
+    text-align: center
+    transition: transform 0.5s
+    transform-style: preserve-3d
+.frontCard
+    position: absolute
+    width: 100%
+    height: 100%
+    backface-visibility: hidden
+.backCard
+    width: 100%
+    height: 100%
+    background-size: contain
+    position: absolute
+    backface-visibility: hidden
+    transform: rotateY(180deg)
+.frontTarot
+    width: 120px
+    height: 220px

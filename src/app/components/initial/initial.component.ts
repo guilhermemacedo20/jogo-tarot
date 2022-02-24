@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  ElementRef, OnInit, QueryList, ViewChildren, } from '@angular/core';
 import { InitialService } from 'src/app/services/initial.service';
+import { PosGameComponent } from '../pos-game/pos-game.component';
 
 @Component({
   selector: 'app-initial',
@@ -7,26 +8,28 @@ import { InitialService } from 'src/app/services/initial.service';
   styleUrls: ['./initial.component.sass']
 })
 export class InitialComponent implements OnInit {
-  images : any;
-  error: any;
-  clickTarot: boolean = false;
-  constructor(private initialService: InitialService) { 
-    this.getter();
-  }
-  setClickTarot(click: boolean){
-    this.clickTarot = click;
-  }
-  ngOnInit(): void { }
+  tarotCard: any;
+
+  chooseCard: boolean = false;
+
+  @ViewChildren(PosGameComponent) tarotCardList:
+    | QueryList<PosGameComponent>
+    | undefined;
+
+  constructor(private initialService: InitialService, private el: ElementRef) {}
   
-  getter(){
-    this.initialService.getCards().subscribe(
-    (data: any) => {
-      this.images = data;
-      console.log("Data que recebemos: ", data);
-      console.log("Variável que preenchemos: ", this.images);      
-    }, (error: any) =>{
-      this.error = error;
-      console.error("Erro: ",error);
+  ngOnInit(): void {
+    this.initialService.getAPI().subscribe((tarot) => {
+      this.tarotCard = tarot;
     });
+  }
+
+  public changeCards() {
+    this.chooseCard = false;
+    this.tarotCardList?.forEach((tarot) => {
+      tarot.seeTarot();
+    });
+
+    setTimeout(() => { this.tarotCard.cards.sort(() => Math.random()-0.2); }, 100);
   }
 }

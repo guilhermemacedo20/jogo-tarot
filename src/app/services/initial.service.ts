@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class InitialService {  
   constructor(private http: HttpClient) { }
 
-  public getCards():Observable<any>{
+  public getAPI():Observable<any>{
    return this.http.get('https://dentalclouddev.s3.amazonaws.com/challenge/tarot.json');
   }
   

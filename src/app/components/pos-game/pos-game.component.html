@@ -1,0 +1,11 @@
+<mat-card class="card" (click)="selectCard()">
+    <div class="turnCard">
+      <div class="frontCard">
+        <div class="imageCard">
+          <img class="frontTarot" [src]="imagesUrl + card.image" alt="{{ card.name }}" />
+        </div>
+      </div>
+      <div class="backCard" style="background-image: url('{{ imageBackCard }}')">
+      </div>
+    </div>
+</mat-card>
