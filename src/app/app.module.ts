@@ -4,15 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { CrudComponent } from './components/crud/crud.component';
 import { HttpClientModule } from '@angular/common/http';
+import { InitialComponent } from './components/initial/initial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CrudComponent
+    InitialComponent,
   ],
   imports: [
     BrowserModule,

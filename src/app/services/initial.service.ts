@@ -5,9 +5,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CrudService {  
+export class InitialService {  
   constructor(private http: HttpClient) { }
-  public getImagem():Observable<any>{
+
+  public getCards():Observable<any>{
    return this.http.get('https://dentalclouddev.s3.amazonaws.com/challenge/tarot.json');
   }
+  
 }
